@@ -7,7 +7,7 @@ const rl = readline.createInterface({ input, output });
 let numAttempts;
 
 //specifies how many attempts the user wants
-askLimit = answer => {
+function askLimit(answer) {
     numAttempts = answer;
      // first question, minimum number and after this it calls asRange
     rl.question("Enter a minimum number ", askRange);
@@ -44,7 +44,7 @@ function askRange(min) {
 }
 
 // functon that checks if the guess is higher or lower than secretNum
-let checkGuess = num => {
+const checkGuess = num => {
     if (num > secretNumber) {
         console.log("Too high");
         return false;
